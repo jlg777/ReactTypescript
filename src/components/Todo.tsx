@@ -1,14 +1,16 @@
 import { type Todo as TodoTypes } from '../../definitions'
 
-type Props = TodoTypes;
+interface Props extends TodoTypes {
+  handleRemove: (id:string) => void
 
-const Todo= ({ id, title, completed }: Props) => {
+}
+ 
+const Todo= ({ id, title, completed, handleRemove }: Props) => {
   return (
     <div className="view">
-      <input type="checkbox" className="toggle" checked={completed} onChange={() => {}} />
+      <input type="checkbox" className="toggle" checked={completed} onChange={() => {!completed}} />
       <label htmlFor="">{title}</label>
-      <p>{id}</p>
-      <button></button>
+      <button className='destroy' onClick={() => {handleRemove(id)}}></button>
     </div>
   )
 }
