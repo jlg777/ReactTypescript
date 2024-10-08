@@ -3,6 +3,7 @@ import {mockTodos} from "./mocks/mockTodos"
 import Todos from "./components/Todos"
 import { Todo } from "../definitions"
 
+
 function App() {
 const [todos, setTodos] = useState<Todo[]>(mockTodos)
 

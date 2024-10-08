@@ -8,7 +8,7 @@ interface Props extends TodoTypes {
 const Todo= ({ id, title, completed, handleRemove }: Props) => {
   return (
     <div className="view">
-      <input type="checkbox" className="toggle" checked={completed} onChange={() => {}} />
+      <input type="checkbox" className="toggle" checked={completed} onChange={() => {!completed}} />
       <label htmlFor="">{title}</label>
       <button className='destroy' onClick={() => {handleRemove(id)}}></button>
     </div>
