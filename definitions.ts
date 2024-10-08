@@ -8,4 +8,5 @@ export interface Todo {
 export interface  TodosProps {
     todos: Todo[];
     handleRemove: (id:string) => void
+    handleCompleted: (id:string) => void
 };
