@@ -3,7 +3,7 @@ export const mockTodos =
         {
             id: '1',
             title: 'Terminar el proyecto',
-            completed: false
+            completed: true
         },
         {
             id: '2',
