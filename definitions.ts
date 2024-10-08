@@ -1,9 +1,11 @@
-export type Todo = {
+export interface Todo {
     id: string;
     title: string;
     completed: boolean;
+    
 };
 
-export type TodosProps = {
+export interface  TodosProps {
     todos: Todo[];
+    handleRemove: (id:string) => void
 };
