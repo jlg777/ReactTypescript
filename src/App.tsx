@@ -8,8 +8,9 @@ const [todos] = useState<Todo[]>(mockTodos)
 console.log(todos)
   return (
     <>
-     <p>todo mwvc</p>
+    <div className="todoapp">
      <Todos todos={todos}/>
+    </div>
     </>
   )
 }

@@ -7,8 +7,7 @@ const Todo= ({ id, title, completed }: Props) => {
     <div className="view">
       <input type="checkbox" className="toggle" checked={completed} onChange={() => {}} />
       <label htmlFor="">{title}</label>
-      <p>{id}</p>
-      <button></button>
+      <button className='destroy' onClick={() => {}}></button>
     </div>
   )
 }
