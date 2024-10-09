@@ -12,11 +12,24 @@ const newtodos = todos.filter (todo => todo.id != id)
 setTodos(newtodos)
 }
 
+const handleCompleted = (id: Todo['id']) => {
+  const newtodos = todos.map (todo => { 
+    if (todo.id == id) {
+      return {
+        ...todo, 
+        completed: !todo.completed,
+      }
+    }
+    return todo
+  })
+  setTodos(newtodos)
+}
+
 //console.log(todos)
   return (
     <>
     <div className="todoapp">
-     <Todos todos={todos} handleRemove={handleRemove}/>
+     <Todos todos={todos} handleRemove={handleRemove} handleCompleted={handleCompleted}/>
     </div>
     </>
   )
